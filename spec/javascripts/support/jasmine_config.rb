@@ -5,7 +5,7 @@ module Jasmine
       spec_files = []
       env = Rails.application.assets
       env.each_logical_path do |lp|
-        spec_files << lp if lp =~ %r{^spec/.*\.js$}
+        spec_files << lp if lp =~ %r{^spec/.*\.js$} # or coffee
       end
       spec_files
     end
